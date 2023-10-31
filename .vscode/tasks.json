@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Zen Development Requirements",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": true,
+        "panel": "dedicated"
+      },
+      "command": "python -m pip install -r requirements.txt"
+    },
+    {
+      "label": "Build Libraries",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": true,
+        "panel": "dedicated"
+      },
+      "command": [
+        "python build_scripts/build.py",
+        "--project-name=zen",
+        "--build-type=${input:build_type}",
+        "-pf=${workspaceFolder}",
+        "-of=${workspaceFolder}/build",
+        "-bf=${workspaceFolder}/build",
+        "-o is_contributor_build=True"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Tests",
+      "type": "shell",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": true,
+        "panel": "dedicated"
+      },
+      "command": [
+        "python build_scripts/build.py",
+        "--project-name=zen",
+        "--build-type=${input:build_type}",
+        "-pf=${workspaceFolder}",
+        "-of=${workspaceFolder}/build",
+        "-bf=${workspaceFolder}/build",
+        "-o is_contributor_build=True",
+        "-o with_testing=True"
+      ],
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "build_type",
+      "description": "Build and packaging settings.",
+      "type": "pickString",
+      "options": [
+        "Release",
+        "RelWithDebInfo",
+        "Debug"
+      ],
+      "default": "Release"
+    }
+  ]
+}

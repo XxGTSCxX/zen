@@ -1,0 +1,14 @@
+# Folders
+build/
+build_scripts/__pycache__/
+
+# Files
+.vscode/.*
+build_profiles/zen_current
+src/config.hpp
+src/config.hpp.in
+src/**.generated.cpp
+src/**.generated.hpp
+src/**.generated.inl
+
+# Exceptions (pre-fix with "!")

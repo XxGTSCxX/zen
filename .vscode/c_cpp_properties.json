@@ -1,0 +1,57 @@
+{
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/**"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ".vscode/"
+      },
+      "intelliSenseMode": "clang-arm64",
+      "cppStandard": "c++17",
+      "compileCommands": "${workspaceFolder}/build/release/compile_commands.json"
+    },
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/include",
+          "${workspaceFolder}/src"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ".vscode/"
+      },
+      "intelliSenseMode": "clang-x64",
+      "cppStandard": "c++17",
+      "compileCommands": "${workspaceFolder}/build/release/compile_commands.json"
+    },
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/**"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ".vscode/"
+      },
+      "intelliSenseMode": "clang-x64",
+      "cppStandard": "c++17",
+      "compileCommands": "${workspaceFolder}/build/release/compile_commands.json"
+    }
+  ],
+  "version": 4
+}

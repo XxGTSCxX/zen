@@ -1,0 +1,23 @@
+{
+  "C_Cpp.doxygen.generatedStyle": "/*!",
+  "C_Cpp.doxygen.generateOnType": true,
+  "C_Cpp.doxygen.sectionTags": [
+    "attention",
+    "tparam",
+    "param",
+    "result",
+    "returns",
+    "retval",
+    "exception",
+    "deprecated",
+    "warning",
+    "note"
+  ],
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}
